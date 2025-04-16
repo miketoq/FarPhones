@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+.border-info {
+    --bs-border-opacity: 1;
+    border-color: rgba(#0D5257, var(--bs-border-opacity)) !important;
+    height: 100vh;
+    width: 30vh;
+}
+.container
+{
+    display: flex; 
+}
+
+.sidebar
+{
+    width: 250px;
+    height: 10m;
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
+    padding: 20px;
+    /* margin-left: 1em; */
+    margin-top: 4em;
+
+}
+
+.title
+{
+    font-size: xx-large;
+}
