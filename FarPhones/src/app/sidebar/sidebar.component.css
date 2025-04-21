@@ -13,6 +13,14 @@
   top: 0;
   margin-top: 0;
   padding-top: 2rem;
+  justify-content: space-between;
+}
+
+.sidebar-footer {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding-top: 2rem;
 }
 
 .sidebar-buttons {
@@ -51,24 +59,21 @@
   text-align: center;
 }
 
-@keyframes wiggle {
+@keyframes pulse {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1);
   }
-  25% {
-    transform: rotate(1deg);
+  40% {
+    transform: scale(1.15);
   }
-  50% {
-    transform: rotate(-1deg);
-  }
-  75% {
-    transform: rotate(1deg);
+  70% {
+    transform: scale(0.95);
   }
   100% {
-    transform: rotate(0deg);
+    transform: scale(1);
   }
 }
 
 .sidebar-title:hover {
-  animation: wiggle 0.4s ease-in-out;
+  animation: pulse 0.6s cubic-bezier(0.66, 0, 0, 1);
 }
