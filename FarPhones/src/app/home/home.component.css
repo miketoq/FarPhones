@@ -1,0 +1,19 @@
+.main-content {
+  margin-left: 250px;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f5f0e6;
+}
+.header {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d5257;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
