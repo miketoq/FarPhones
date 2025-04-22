@@ -24,3 +24,8 @@
 {
     font-size: xx-large;
 }
+
+@font-face {
+    font-family: landingfont;
+    src: url('assets/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+}
