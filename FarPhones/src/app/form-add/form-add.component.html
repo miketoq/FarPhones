@@ -4,43 +4,44 @@
     <!-- Name -->
     <div class="mb-3">
       <label for="name" class="form-label">Full Name</label>
-      <input type="text" id="name" class="form-control" required />
+      <input type="text" id="name" class="form-control" [(ngModel)]="this.user.fullName" required />
     </div>
 
     <!-- Email -->
     <div class="mb-3">
       <label for="email" class="form-label">Email Address</label>
-      <input type="email" id="email" class="form-control" required />
+      <input type="email" id="email" class="form-control" [(ngModel)]="this.user.email" required />
     </div>
 
     <!-- Phone -->
     <div class="mb-3">
       <label for="phone" class="form-label">Phone Number</label>
-      <input type="tel" id="phone" class="form-control" required />
+      <input type="tel" id="phone" class="form-control" [(ngModel)]="this.user.phoneNumber" required />
     </div>
 
     <!-- Role -->
     <div class="mb-3">
       <label for="role" class="form-label">Role</label>
-      <select id="role" class="form-select">
-        <option value="resident">Resident</option>
-        <option value="business">Business</option>
+      <select id="role" class="form-select" [(ngModel)]="this.user.role"> 
+        <option value="Resident">Resident</option>
+        <option value="Business">Business</option>
       </select>
     </div>
 
     <!-- Address -->
     <div class="mb-3">
       <label for="address" class="form-label">Address</label>
-      <input type="text" id="address" class="form-control" required />
+      <input type="text" id="address" class="form-control" [(ngModel)]="this.user.address" required />
     </div>
 
     <!-- Description -->
     <div class="mb-3">
       <label for="Description" class="form-label">Description (Business)</label>
-      <input type="text" id="Description" class="form-control" />
+      <input type="text" id="Description" class="form-control" [(ngModel)]="this.user.description" />
     </div>
 
     <!-- Submit Button -->
+     <!-- If we want to we can routerLink="/directory" but the admin might want to continue adding Users, so maybe not -->
     <button type="submit" class="btn btn-primary" (click)="addUser()">Submit</button>
   </div>
 </div>

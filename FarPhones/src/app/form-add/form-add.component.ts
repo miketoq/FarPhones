@@ -1,10 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { User } from '../user.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-form-add',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './form-add.component.html',
   styleUrl: './form-add.component.css'
 })

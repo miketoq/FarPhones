@@ -7,6 +7,19 @@
   align-items: flex-start;
   background-color: #f5f0e6;
 }
+
+.form-container {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .header {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2rem;

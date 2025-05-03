@@ -10,11 +10,10 @@
           <p>{{user.phoneNumber}}</p>
           <p>{{user.role}}</p>
           <p>{{user.description}}</p>
-          <!-- TODO: Needs formatting,
-           probably bottom left corner then bottom right corner -->
+          <!-- TODO: Buttons need formatting por favor-->
+          <button class="btn btn-outline-primary btn-sm" id="edit-btn" [routerLink]="['/edit', user.id]">Edit</button> <br>
 
-           <!-- There is an issue with passing the user.id to the routerLink. The user.id is a string and I'm not sure the routing works with string values -->
-          <button class="btn btn-outline-primary btn-sm" id="edit-btn" [routerLink]="['user', user.id]">Edit</button> <br>
+          <!-- We can either have the delete button on the form-list or form-edit. Up to you guys whatever you think is better -->
           <button class="btn btn-outline-danger btn-sm" id="delete-btn" (click)="delete(user.id)">Delete</button>
         </div>
       }

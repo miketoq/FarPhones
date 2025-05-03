@@ -54,5 +54,6 @@ export class UserService {
     return docData(userDocRef, { idField: 'id'}) as Observable<User>;
   }
 
+
   constructor() { }
 }
