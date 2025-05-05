@@ -11,9 +11,28 @@
       Where technology meets reliability.<br />
       Explore our features and connect with confidence.
     </p>
+
     <div class="dark-buttons">
       <button class="sidebar-btn" routerLink="/directory">📞 Explore</button>
       <button class="sidebar-btn" routerLink="/contactus">✉️ Contact</button>
     </div>
+
+    @if(topThreeUsers.length > 0) {
+      <div class="dark-card top-three-container">
+        <h2 class="dark-header">🔥 Popular Places 🔥</h2>
+
+        @for(user of topThreeUsers; track user.id;) {
+          <div class="dark-subcard" (click)="contact(user.id)" style="cursor: pointer;">
+            <div class="user-info">
+              <h4 class="dark-text">{{ user.fullName }}</h4>
+              <p class="dark-text">{{ user.email }}</p>
+              <p class="dark-text">{{ user.phoneNumber }}</p>
+              <p class="dark-text">{{ user.role }}</p>
+              <p class="dark-text">{{ user.description }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    }
   </div>
 </div>
