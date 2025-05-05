@@ -14,14 +14,14 @@
   font-weight: 700;
   color: #0d5257;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
-  /* margin-bottom: 1.5rem; */
+  margin-bottom: 1.5rem;
   text-align: center;
   letter-spacing: 0.5px;
 }
 
-.directory-container {
+.info-container {
   width: 100%;
-  max-width: 900px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -31,76 +31,48 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.tiles-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
 .card {
   font-family: "Roboto", sans-serif;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
 }
-.card h4 {
+
+.card h2 {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #0d5257;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .card p {
   font-weight: 400;
   font-size: 1rem;
   color: #333;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .card:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.edit-btn {
+.close-btn {
   padding: 8px 12px;
   font-size: 14px;
   font-weight: 600;
-  color: #0d5257;
-  background-color: white;
-  border: 2px solid #0d5257;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.edit-btn:hover {
+  color: white;
   background-color: #0d5257;
-  color: white;
-}
-
-.delete-btn {
-  padding: 8px 12px;
-  font-size: 14px;
-  font-weight: 600;
-  color: white;
-  background-color: #d9534f;
-  border: 2px solid #c9302c;
+  border: 2px solid #093f42;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
-.delete-btn:hover {
-  background-color: #c9302c;
-  border-color: #b52b27;
-}
-
-.button-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
+.close-btn:hover {
+  background-color: #093f42;
+  border-color: #062e30;
 }

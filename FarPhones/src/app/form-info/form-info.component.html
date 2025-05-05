@@ -1,0 +1,15 @@
+<div class="main-content">
+  <div class="info-container">
+    <h2 class="header">Contact Information</h2>
+
+    <div class="card">
+      <h2>{{ user?.fullName }}</h2>
+      <p>Email: {{ user?.email }}</p>
+      <p>Phone: {{ user?.phoneNumber }}</p>
+      <p>Role: {{ user?.role }}</p>
+      <p>Description: {{ user?.description }}</p>
+    </div>
+
+    <button class="close-btn" (click)="close()">Close</button>
+  </div>
+</div>
