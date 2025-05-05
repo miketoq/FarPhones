@@ -4,6 +4,7 @@ import { FormEditComponent } from './form-edit/form-edit.component';
 import { FormAddComponent } from './form-add/form-add.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
+import { FormInfoComponent } from './form-info/form-info.component';
 
 export const routes: Routes = [
   {
@@ -30,5 +31,10 @@ export const routes: Routes = [
     path: 'aboutus',
     component: AboutUsComponent,
     title: 'About Us',
+  },
+  {
+    path: 'info/:id',
+    component: FormInfoComponent,
+    title: 'Contact Info',
   },
 ];

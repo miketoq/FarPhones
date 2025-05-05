@@ -2,47 +2,23 @@
   <div class="directory-container">
     <h2 class="header">Directory</h2>
     <div class="tiles-container">
-      @for(user of users; track user.id;)
-      {
-        <div class="card">
-          <h4>{{user.fullName}}</h4>
-          <p>{{user.email}}</p>
-          <p>{{user.phoneNumber}}</p>
-          <p>{{user.role}}</p>
-          <p>{{user.description}}</p>
-          <!-- TODO: Buttons need formatting por favor-->
-          <button class="btn btn-outline-primary btn-sm" id="edit-btn" [routerLink]="['/edit', user.id]">Edit</button> <br>
-
-          <!-- We can either have the delete button on the form-list or form-edit. Up to you guys whatever you think is better -->
-          <button class="btn btn-outline-danger btn-sm" id="delete-btn" (click)="delete(user.id)">Delete</button>
+      @for(user of users; track user.id;) {
+      <div class="card">
+        <div class="user-info" (click)="contact(user.id)">
+          <h4>{{ user.fullName }}</h4>
+          <p>{{ user.email }}</p>
+          <p>{{ user.phoneNumber }}</p>
+          <p>{{ user.role }}</p>
+          <p>{{ user.description }}</p>
         </div>
+        <div class="button-container">
+          <button class="edit-btn" [routerLink]="['/edit', user.id]">
+            Edit
+          </button>
+          <button class="delete-btn" (click)="delete(user.id)">Delete</button>
+        </div>
+      </div>
       }
-      <!-- <div class="card">
-        <h4>Jane Doe</h4>
-        <p>Email: jane</p>
-        <p>Phone: (555)</p>
-        <p>Role: Business</p>
-        <p>Description: Sell dolls</p>
-      </div>
-      <div class="card">
-        <h4>John Smith</h4>
-        <p>Email: john</p>
-        <p>Phone: (555)</p>
-        <p>Role: Resident</p>
-      </div> -->
-      <!--ADD MORE-->
-      <!-- <div class="card">
-        <h4>Mike Toq</h4>
-        <p>Email: mike</p>
-        <p>Phone: (701)</p>
-        <p>Role: Resident</p>
-      </div>
-      <div class="card">
-        <h4>Reece brei</h4>
-        <p>Email: brei</p>
-        <p>Phone: (218)</p>
-        <p>Role: Resident</p>
-      </div> -->
     </div>
   </div>
 </div>
