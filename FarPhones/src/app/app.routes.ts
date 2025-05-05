@@ -5,6 +5,7 @@ import { FormAddComponent } from './form-add/form-add.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
 import { FormInfoComponent } from './form-info/form-info.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 export const routes: Routes = [
   {
@@ -26,6 +27,11 @@ export const routes: Routes = [
     path: 'add',
     component: FormAddComponent,
     title: 'Form Add',
+  },
+  {
+    path: 'contactus',
+    component: ContactUsComponent,
+    title: 'Contact Us',
   },
   {
     path: 'aboutus',

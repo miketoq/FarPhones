@@ -1,19 +1,156 @@
-.main-content {
-  margin-left: 250px;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: #0d5257;
+  color: white;
+}
+
+.landing {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+}
+
+.overlay {
+  position: absolute;
+  width: 90%;
+  max-width: 850px;
+  text-align: center;
   padding: 2rem;
-  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.landing-title {
+  font-size: 4.8rem;
+  font-family: "Bebas Neue", sans-serif;
+  color: #f5f0e1; /* Cream */
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+  animation: slideIn 1.2s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.dropdown-menu {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.dropdown-item {
+  color: #f5f0e1;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #0d5257;
+}
+
+.main-content.dark-panel {
+  background: linear-gradient(to bottom, #113f43, #0d5257);
+  padding: 6rem 2rem;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  background-color: #f5f0e6;
+  align-items: center;
+  min-height: 100vh;
 }
-.header {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0d5257;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
-  margin-bottom: 1.5rem;
+
+.dark-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 3rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  max-width: 600px;
+  width: 90%;
   text-align: center;
-  letter-spacing: 0.5px;
+}
+
+.dark-header {
+  font-size: 2.8rem;
+  font-family: "Bebas Neue", sans-serif;
+  color: #f5f0e1;
+}
+
+.dark-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+.dark-text {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  color: #c2c2c2;
+  line-height: 1.6;
+}
+
+.sidebar-btn {
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-btn:first-child {
+  background: #f5f0e1;
+  color: #0d5257;
+}
+
+.sidebar-btn:first-child:hover {
+  background: #fff;
+  color: #0a0a0a;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.sidebar-btn:last-child {
+  background: transparent;
+  border: 2px solid #f5f0e1;
+  color: #f5f0e1;
+}
+
+.sidebar-btn:last-child:hover {
+  background: #f5f0e1;
+  color: #0d5257;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
 }
