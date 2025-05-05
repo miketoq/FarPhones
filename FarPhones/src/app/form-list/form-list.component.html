@@ -1,24 +1,48 @@
 <div class="main-content">
   <div class="directory-container">
     <h2 class="header">Directory</h2>
+    <h2 class="header">Search by Name</h2>
+    <input type='text' [(ngModel)]='input' (keyup)="sendSearch()" />
     <div class="tiles-container">
-      @for(user of users; track user.id;) {
-      <div class="card">
-        <div class="user-info" (click)="contact(user.id)">
-          <h4>{{ user.fullName }}</h4>
-          <p>{{ user.email }}</p>
-          <p>{{ user.phoneNumber }}</p>
-          <p>{{ user.role }}</p>
-          <p>{{ user.description }}</p>
-        </div>
-        <div class="button-container">
-          <button class="edit-btn" [routerLink]="['/edit', user.id]">
-            Edit
-          </button>
-          <button class="delete-btn" (click)="delete(user.id)">Delete</button>
-        </div>
+      @if(!input)
+      {
+        @for(user of users; track user.id;)
+        {
+          <div class="card">
+            <h4>{{user.fullName}}</h4>
+            <p>{{user.email}}</p>
+            <p>{{user.phoneNumber}}</p>
+            <p>{{user.role}}</p>
+            <p>{{user.description}}</p>
+            <div class="button-container">
+              <button class="edit-btn" [routerLink]="['/edit', user.id]">
+                Edit
+              </button>
+            <button class="delete-btn" (click)="delete(user.id)">Delete</button>
+      </div>
+          </div>
+        }
+      }
+      @else
+      {
+        @for(user of filteredItems(); track user.id;)
+        {
+          <div class="card">
+            <h4>{{user.fullName}}</h4>
+            <p>{{user.email}}</p>
+            <p>{{user.phoneNumber}}</p>
+            <p>{{user.role}}</p>
+            <p>{{user.description}}</p>
+            </div>
+            <div class="button-container">
+              <button class="edit-btn" [routerLink]="['/edit', user.id]">
+                Edit
+              </button>
+            <button class="delete-btn" (click)="delete(user.id)">Delete</button>
       </div>
       }
+    }
+
     </div>
   </div>
 </div>

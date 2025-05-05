@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable, inject, signal } from '@angular/core';
 import { collection, Firestore, collectionData, doc, setDoc, updateDoc, deleteDoc, docData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
@@ -22,6 +22,8 @@ export class UserService {
   private firestore = inject(Firestore);
 
   private userCollection = collection(this.firestore, 'users');
+
+  searchTerm = signal<string>('');
 
   getUsers(): Observable<User[]>
   {
