@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Message, MessageService } from '../message.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-us',
@@ -19,7 +20,8 @@ export class ContactUsComponent implements OnInit{
     email: '',
     message: ''
   }
-
+  
+  constructor(private route: ActivatedRoute, private router: Router) {}
   messages: Message[] = [];
 
   ngOnInit() 
@@ -31,6 +33,7 @@ export class ContactUsComponent implements OnInit{
   {
     this.messageService.addMessage(this.message);
     this.resetForm();
+    this.router.navigate(['/directory']);
   }
 
   resetForm()

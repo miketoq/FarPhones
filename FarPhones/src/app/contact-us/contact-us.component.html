@@ -1,28 +1,24 @@
-<div class="main-content">
-  <div class="contact-container">
-    <h2 class="header">Contact Us</h2>
-    <p class="contact-description">
-      Have a question or need assistance? Send us a message and we'll get back
-      to you.
-    </p>
+  <div class="main-content">
+    <div class="contact-container">
+      <h2 class="header">Contact Us</h2>
+      <p class="contact-description">
+        Have a question or need assistance? Send us a message and we'll get back
+        to you.
+      </p>
 
-    <form class="contact-form">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required [(ngModel)]="message.name"/>
+      <form class="contact-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" [(ngModel)]="this.message.name" [ngModelOptions]="{standalone: true}" required />
 
-      <label for="email">Your Email</label>
-      <input type="email" id="email" placeholder="Enter your email" required [(ngModel)]="message.email"/>
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="Enter your email" [(ngModel)]="this.message.email" [ngModelOptions]="{standalone: true}" required />
 
-      <label for="message">Message</label>
-      <textarea
-        id="message"
-        rows="5"
-        placeholder="Type your message..."
-        required
-         [(ngModel)]="message.message"
-        ></textarea>
+        <label for="message">Message</label>
+        <textarea
+          id="message" rows="5" placeholder="Type your message..." [(ngModel)]="this.message.message" [ngModelOptions]="{standalone: true}" required
+          ></textarea>
 
-      <button type="submit" class="submit-btn" (click)="addMessage()">Send Message</button>
-    </form>
+        <button type="submit" class="submit-btn" (click)="addMessage()">Send Message</button>
+      </form>
+    </div>
   </div>
-</div>
